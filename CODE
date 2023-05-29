@@ -1,0 +1,25 @@
+import os, shutil
+#operating sytem, and high level operation on our files
+
+path = r"/Users/grace/Desktop/0817_진성은/"
+
+file_name= os.listdir(path)
+#showing what is in the path folder
+
+
+#make folders in the files 
+folder_names = ['csv files','img files','text files']
+for loop in range(0,3):
+    if not os.path.exists(path + folder_names[loop]):
+        os.makedirs(path + folder_names[loop])
+        
+for file in file_name:
+    if ".csv" in file and not os.path.exists(path+ "csv files/" +file):
+    #second one needs to be moved to the second index
+        shutil.move(path+file, path+ "csv files/" +file)
+    elif ".jpg" in file and not os.path.exists(path+ "img files/" +file):
+    #second one needs to be moved to the second index
+        shutil.move(path+file, path+ "img files/" +file)
+    elif ".txt" in file and not os.path.exists(path+ "txt files/" +file):
+    #second one needs to be moved to the second index
+        shutil.move(path+file, path+ "txt files/" +file)
