@@ -22,4 +22,4 @@ for file in file_name:
         shutil.move(path+file, path+ "img files/" +file)
     elif ".txt" in file and not os.path.exists(path+ "txt files/" +file):
     #second one needs to be moved to the second index
-        shutil.move(path+file, path+ "txt files/" +file)
+        shutil.move(path+file, path+ "txt files/" +file) 
